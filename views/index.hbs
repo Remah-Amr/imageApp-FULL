@@ -1,0 +1,25 @@
+
+  <div class="container">
+     <h1>FILE UPLOAD </h1>
+     {{#if msg}} <h3>{{msg}}</h3> {{/if}}
+ <form action="/upload" method="POST" enctype="multipart/form-data">
+    <div class="input-field inline">
+      <input type="text" name="imageName">
+      <label>Name</label>
+    </div>
+    <div class="file-field input-field">
+      <div class="btn red">
+        <span>File</span>
+        <input name ="myImage" type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+      <button class="btn" type="submit"> SUBMIT </button>
+      <a href="/images" class="btn blue" style="margin-left: 10px;">Show All Images</a>
+    </div>
+    
+  </form>
+  <br>
+<img src="{{file}}" class="responsive-img">
+ </div>
